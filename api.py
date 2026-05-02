@@ -40,6 +40,7 @@ class State(TypedDict):
 # ── 3. Tools ─────────────────────────────────────────────────────────────────
 search_tool = TavilySearchResults(
     max_results=8,
+    min_results=3,
     search_depth="advanced",
     include_raw_content=False,
 )

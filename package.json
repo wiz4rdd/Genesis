@@ -1,12 +1,15 @@
 {
-  "name": "zen-next",
-  "version": "0.1.0",
+  "name": "genesis-research",
+  "version": "1.0.0",
+  "description": "Autonomous Deep Research Agent - Unified Stack",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:backend": "uvicorn api:app --host 0.0.0.0 --port 8000 --reload",
+    "dev:frontend": "next dev",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -25,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^8.2.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",

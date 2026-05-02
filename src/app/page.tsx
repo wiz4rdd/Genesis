@@ -10,7 +10,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { cn } from '@/lib/utils';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API = '/api';
 const USER_NAME_KEY = 'genesis_user_name';
 const THREADS_KEY   = 'genesis_threads';
 const ACTIVE_KEY    = 'genesis_active_thread';

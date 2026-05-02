@@ -5,7 +5,7 @@ The **Zen Research** project is a high-performance, AI-driven research assistant
 ## 🏗️ Architecture & Core Components
 
 ### 1. Backend (Python/FastAPI)
-The backend is located in `api.py` and serves as the orchestration layer.
+The backend is located in `index.py` and serves as the orchestration layer.
 - **LLM Engine**: Powered by **Google Gemini Flash** or **Groq**, providing low-latency responses.
 - **Orchestration**: Uses **LangGraph** to manage the research workflow.
 - **API Strategy**: 

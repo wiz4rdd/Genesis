@@ -1,7 +1,7 @@
 [project]
 name = "agentic-ai"
 version = "0.1.0"
-description = "Add your description here"
+description = "Autonomous Deep Research Agent - Unified Stack"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,4 +13,16 @@ dependencies = [
     "langgraph>=1.1.6",
     "langsmith>=0.7.25",
     "python-dotenv>=1.2.2",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "langchain-google-genai>=2.0.0",
+    "orjson>=3.10.0",
+]
+
+[project.scripts]
+app = "index:app"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
 ]

@@ -4,7 +4,7 @@
   "description": "Autonomous Deep Research Agent - Unified Stack",
   "private": true,
   "scripts": {
-    "dev:backend": "uvicorn api:app --host 0.0.0.0 --port 8000 --reload",
+    "dev:backend": "uvicorn index:app --host 0.0.0.0 --port 8000 --reload",
     "dev:frontend": "next dev",
     "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
     "build": "next build",

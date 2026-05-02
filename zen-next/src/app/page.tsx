@@ -90,7 +90,7 @@ const MessageBubble = ({ msg, userName }: { msg: Message; userName: string }) =>
   };
 
   return (
-    <div className="group/msg flex items-start gap-4 py-3 first:pt-0 w-full relative">
+    <div className="group/msg flex items-start gap-4 py-5 first:pt-0 w-full relative">
       {/* Avatar */}
       <div className={cn(
         "flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-[13px] font-bold border overflow-hidden relative",
@@ -432,7 +432,7 @@ export default function Home() {
             <span className="font-serif text-xl text-white tracking-tight">Genesis</span>
           </div>
 
-          <div className="relative flex items-center gap-1 z-10 text-zinc-500">
+          <div className="relative flex items-center gap-2 z-10 text-zinc-500">
             <button onClick={newThread} className="p-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">
               <Plus size={16} />
             </button>
@@ -445,8 +445,8 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Messages — top padding accounts for absolute nav height */}
-        <div ref={scrollRef} className="absolute inset-0 overflow-y-auto pt-14 px-6 pb-28 scroll-smooth overscroll-none">
+        {/* Messages — top padding accounts for absolute nav height + extra gap */}
+        <div ref={scrollRef} className="absolute inset-0 overflow-y-auto pt-20 px-6 pb-28 scroll-smooth overscroll-none">
           <div className="max-w-2xl mx-auto w-full">
             {activeThread?.messages.map(msg => (
               <MessageBubble key={msg.id} msg={msg} userName={userName} />
